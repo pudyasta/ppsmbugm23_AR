@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 
 import QRScanner from "../components/QRScanner";
 import EntryAr from "../components/EntryAr";
-import Scanner from "../components/Scanner";
+import Scanner from "../components/Scanner.cjs";
 
 export default function Home() {
 
