@@ -31,6 +31,7 @@
 
 // export default QRScanner;
 import { QrScanner } from "@yudiel/react-qr-scanner";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
 const QRScanner = () => {
@@ -38,7 +39,6 @@ const QRScanner = () => {
   const router = useRouter();
 
   const handleRes = (res) => {
-    alert("Ok");
     setIsDetected(true);
     router.push("/blogs");
   };
@@ -54,13 +54,15 @@ const QRScanner = () => {
   return (
     <div>
       <button onClick={toFormasi}>Formasi</button>
-      {!isDetected && (
+      {!isDetected ? (
         <QrScanner
           style={myStyle}
           onResult={(result) => handleRes()}
           onDecode={(result) => console.log(result)}
           onError={(error) => console.log(error?.message)}
         />
+      ) : (
+        <Image src={"/loading.gif"} layout="fill" />
       )}
     </div>
   );

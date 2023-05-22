@@ -32,6 +32,9 @@ button {
   z-index: 99999;
   cursor: pointer;
 }
+canvas {
+  height: 100vh !important;
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

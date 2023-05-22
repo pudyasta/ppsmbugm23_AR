@@ -1,4 +1,4 @@
-import styles from "../styles/Home.module.css";
+import "../styles/Home.module.css";
 import React, { useEffect, useState } from "react";
 
 import QRScanner from "../components/QRScanner";
@@ -20,6 +20,7 @@ export default function Home() {
 
   return (
     <>
+      <audio src="/iphone_14.mp3"></audio>
       <div className="container">
         {device === "mobile" ? <QRScanner /> : <EntryAr />}
       </div>

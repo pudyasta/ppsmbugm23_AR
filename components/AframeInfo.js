@@ -12,7 +12,7 @@ const AframeInfo = () => {
       <pointLight position={[10, 10, 10]} />
       <ModelThree position={[0, 5, -30]} scale={[0.09, 0.09, 0.09]} />
       <OrbitControls />
-      <Environment files="/ok2.hdr" background />
+      <Environment files="/fisipol.hdr" background />
     </Canvas>
   );
 };
