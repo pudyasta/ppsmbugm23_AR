@@ -44,7 +44,8 @@ const QRScanner = () => {
   };
 
   const toFormasi = () => {
-    router.push("/Scanner");
+    // router.push("/Scanner");
+    alert("AAJAJA");
   };
 
   const myStyle = {
@@ -53,7 +54,7 @@ const QRScanner = () => {
 
   return (
     <div>
-      <button onClick={toFormasi}>Formasi</button>
+      <button onClick={toFormasi}>Formasix</button>
       {!isDetected ? (
         <QrScanner
           style={myStyle}
