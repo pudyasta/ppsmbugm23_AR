@@ -9,11 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "^12.3.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
     "@juggle/resize-observer": "^3.4.0",
-    "@react-three/drei": "^9.66.1",
+    "@react-three/drei": "^9.68.6",
     "@react-three/fiber": "^8.13.0",
     "@react-three/xr": "^5.5.0",
     "@testing-library/jest-dom": "^5.16.5",
@@ -24,15 +21,18 @@
     "aframe-react": "^4.4.0",
     "axios": "^1.4.0",
     "mind-ar": "^1.2.1",
+    "next": "^12.3.4",
     "promise.allsettled": "es-shims/Promise.allSettled",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "react-qr-scanner": "^1.0.0-alpha.11",
     "react-router-dom": "^6.11.0",
     "react-scripts": "5.0.1",
+    "react-three-fiber": "^6.0.13",
     "react-three-mind": "^0.2.1",
     "sweetalert2": "^11.7.3",
-    "three": "^0.150.1",
+    "three": "^0.152.2",
     "web-vitals": "^2.1.4"
-    
   },
   "devDependencies": {
     "eslint": "8.41.0",
