@@ -1788,7 +1788,7 @@
   resolved "https://registry.yarnpkg.com/@react-spring/types/-/types-9.6.1.tgz#913d3a68c5cbc1124fdb18eff919432f7b6abdde"
   integrity sha512-POu8Mk0hIU3lRXB3bGIGe4VHIwwDsQyoD1F394OK7STTiX9w4dG3cTLljjYswkQN+hDSHRrj4O36kuVa7KPU8Q==
 
-"@react-three/drei@^9.36.0", "@react-three/drei@^9.66.1":
+"@react-three/drei@^9.36.0", "@react-three/drei@^9.68.6":
   version "9.68.6"
   resolved "https://registry.yarnpkg.com/@react-three/drei/-/drei-9.68.6.tgz#2e2a8a0f7fd10c1a7168d33a9d72b5605b114f83"
   integrity sha512-Jkzs18EqywSHK8uqXmukE5z4C+SDfs5zhnnmE2nh5108ncMbTVUDBLPRdQMFkxU2KIoDcQXQR4vab8WQtfHVMg==
@@ -1814,7 +1814,7 @@
     utility-types "^3.10.0"
     zustand "^3.5.13"
 
-"@react-three/fiber@^8.13.0", "@react-three/fiber@^8.8.10":
+"@react-three/fiber@^8.13.0", "@react-three/fiber@^8.8.10", "@react-three/fiber@latest":
   version "8.13.0"
   resolved "https://registry.yarnpkg.com/@react-three/fiber/-/fiber-8.13.0.tgz#c9eabe60f2276a66d7ce9a3b927083894f4202f9"
   integrity sha512-hPFzFNgikEMyEbL+NpSA7q+UWZxInrrkJldWaCR2w34Fwf20x9p68bsyN0/yn9oM2VlWoJcJjR8hw1tN9AxHuA==
@@ -8772,6 +8772,13 @@ react-scripts@5.0.1:
   optionalDependencies:
     fsevents "^2.3.2"
 
+react-three-fiber@^6.0.13:
+  version "6.0.13"
+  resolved "https://registry.yarnpkg.com/react-three-fiber/-/react-three-fiber-6.0.13.tgz#6dbbc5d8d5fe94c49986e9c71024af7eaf68a441"
+  integrity sha512-uShQnkMVLvnzwf3YzY9mnzCnpmLpvTQkc0ycrtwk8fyjXmZt2695tLn3tufPF6uxq06UKJRKJcjCVCMXyUcEPQ==
+  dependencies:
+    "@react-three/fiber" latest
+
 react-three-mind@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/react-three-mind/-/react-three-mind-0.2.1.tgz#e379b01457b230330a4a7af55703d9ce8db851a8"
@@ -9876,10 +9883,10 @@ three@^0.145.0:
   resolved "https://registry.yarnpkg.com/three/-/three-0.145.0.tgz#a613d71e75effc2aed88be630027ca01e2b6502e"
   integrity sha512-EKoHQEtEJ4CB6b2BGMBgLZrfwLjXcSUfoI/MiIXUuRpeYsfK5aPWbYhdtIVWOH+x6X0TouldHKHBuc/LAiFzAw==
 
-three@^0.150.1:
-  version "0.150.1"
-  resolved "https://registry.yarnpkg.com/three/-/three-0.150.1.tgz#870d324a4d2daf1c7d55be97f3f73d83783e28be"
-  integrity sha512-5C1MqKUWaHYo13BX0Q64qcdwImgnnjSOFgBscOzAo8MYCzEtqfQqorEKMcajnA3FHy1yVlIe9AmaMQ0OQracNA==
+three@^0.152.2:
+  version "0.152.2"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.152.2.tgz#2ee0f2c504d31a4bc29b45495c12bded9fda7bfc"
+  integrity sha512-Ff9zIpSfkkqcBcpdiFo2f35vA9ZucO+N8TNacJOqaEE6DrB0eufItVMib8bK8Pcju/ZNT6a7blE1GhTpkdsILw==
 
 throat@^6.0.1:
   version "6.0.2"
