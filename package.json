@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@belivvr/aframe-react": "^0.4.2",
     "@juggle/resize-observer": "^3.4.0",
     "@react-three/drei": "^9.68.6",
     "@react-three/fiber": "^8.13.0",
@@ -20,8 +21,10 @@
     "aframe-extras.animation-mixer": "^6.1.1",
     "aframe-react": "^4.4.0",
     "axios": "^1.4.0",
+    "install": "^0.13.0",
     "mind-ar": "^1.2.1",
     "next": "^12.3.4",
+    "next-transpile-modules": "^10.0.0",
     "promise.allsettled": "es-shims/Promise.allSettled",
     "react": "18.2.0",
     "react-dom": "18.2.0",

@@ -12,6 +12,7 @@ const InfoGrafis = () => {
 
   return (
     <div style={{ height: "100vh" }}>
+      <audio src="/sounds/vo.m4a" autoPlay={true} loop></audio>
       <XRButton
         mode="ar"
         position={[0, 0, 0]}
