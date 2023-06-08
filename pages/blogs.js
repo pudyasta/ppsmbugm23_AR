@@ -4,7 +4,11 @@ import EntryAr from "../components/EntryAr";
 const blogs = () => {
   return (
     <>
-      <EntryAr />
+      <EntryAr
+        model="/three-assets/isipol.gltf"
+        sound={"/sounds/vo.m4a"}
+        env={"/environtments/fkkmk.hdr"}
+      />
     </>
   );
 };

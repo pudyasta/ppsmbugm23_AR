@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import AframeInfo from "./AframeInfo";
 import InfoGrafis from "./InfoGrafis";
 import Swal from "sweetalert2";
+import Script from "next/script";
+import Head from "next/head";
 
-const EntryAr = () => {
+const EntryAr = ({ sound, model, env, envRotation }) => {
   const [supported, setSupported] = useState(true);
 
   async function checkForXRSupport() {
@@ -40,7 +42,25 @@ const EntryAr = () => {
   useEffect(() => {
     checkForXRSupport();
   }, []);
-  return <>{supported ? <InfoGrafis /> : <AframeInfo />}</>;
+  return (
+    <>
+      <Head>
+        <title>AR PPSMB Pionir Gadjah Mada 2023</title>
+      </Head>
+      <div>
+        {supported ? (
+          <InfoGrafis model={model} sound={sound} />
+        ) : (
+          <AframeInfo
+            model={model}
+            sound={sound}
+            env={env}
+            envRotation={envRotation}
+          />
+        )}
+      </div>
+    </>
+  );
 };
 
 export default EntryAr;

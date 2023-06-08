@@ -20,7 +20,6 @@ export default function Home() {
 
   return (
     <>
-      <audio src="/iphone_14.mp3"></audio>
       <div className="container">
         {device === "mobile" ? <QRScanner /> : <EntryAr />}
       </div>

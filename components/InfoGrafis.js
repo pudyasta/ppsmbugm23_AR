@@ -1,18 +1,18 @@
 import React, { Suspense, useState } from "react";
 import { XR, XRButton } from "@react-three/xr";
-import { OrbitControls, Text } from "@react-three/drei";
+import { OrbitControls, Text, Environment } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { ResizeObserver } from "@juggle/resize-observer";
 import { useRouter } from "next/router";
 import ModelThree from "./ModelThree";
 
-const InfoGrafis = () => {
+const InfoGrafis = ({ sound, model }) => {
   const [inAr, setInAr] = useState(false);
   const router = useRouter();
 
   return (
-    <div style={{ height: "100vh" }}>
-      <audio src="/sounds/vo.m4a" autoPlay={true} loop></audio>
+    <div style={{ height: "100vh", backgroundImage: "url(/fisipol.jpg)" }}>
+      {/* <audio src={sound} autoPlay={true} loop></audio> */}
       <XRButton
         mode="ar"
         position={[0, 0, 0]}
@@ -30,14 +30,19 @@ const InfoGrafis = () => {
           {inAr ? (
             <>
               <ambientLight intensity={0.5} />
-              <ModelThree position={[0, 0, -2]} scale={[0.05, 0.05, 0.05]} />
+              <ModelThree
+                model={`/three-assets/${model}.gltf`}
+                position={[0, -2, -10]}
+                rotation={[0, 15.8, 0]}
+                scale={[1.5, 1.5, 1.5]}
+              />
             </>
           ) : (
             <>
-              <OrbitControls />
+              <Environment files={"/environtments/isipolnew.hdr"} background />
+              <OrbitControls autoRotate />
             </>
           )}
-          <axesHelper />
         </XR>
       </Canvas>
     </div>
