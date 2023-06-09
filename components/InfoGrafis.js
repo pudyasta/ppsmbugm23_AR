@@ -29,7 +29,7 @@ const InfoGrafis = ({ sound, model }) => {
         >
           {inAr ? (
             <>
-              <ambientLight intensity={0.5} />
+              <ambientLight intensity={0.4} />
               <ModelThree
                 model={`/three-assets/${model}.gltf`}
                 position={[0, -2, -10]}
@@ -39,7 +39,7 @@ const InfoGrafis = ({ sound, model }) => {
             </>
           ) : (
             <>
-              <Environment files={"/environtments/isipolnew.hdr"} background />
+              {/* <Environment files={"/environtments/isipolnew.hdr"} background /> */}
               <OrbitControls autoRotate />
             </>
           )}

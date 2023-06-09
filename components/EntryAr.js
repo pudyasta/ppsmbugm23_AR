@@ -4,9 +4,11 @@ import InfoGrafis from "./InfoGrafis";
 import Swal from "sweetalert2";
 import Script from "next/script";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 const EntryAr = ({ sound, model, env, envRotation }) => {
   const [supported, setSupported] = useState(true);
+  const router = useRouter();
 
   async function checkForXRSupport() {
     if (navigator.xr) {
@@ -40,7 +42,13 @@ const EntryAr = ({ sound, model, env, envRotation }) => {
   }
 
   useEffect(() => {
-    checkForXRSupport();
+    const detectDeviceType = () =>
+      /iPhone|iPad|iPod/i.test(navigator.userAgent) ? true : false;
+    if (detectDeviceType() === true) {
+      router.push("https://ppsmbpionirgadjahmada.vercel.app/");
+    } else {
+      checkForXRSupport();
+    }
   }, []);
   return (
     <>

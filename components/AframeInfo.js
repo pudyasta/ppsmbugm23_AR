@@ -43,11 +43,11 @@ const AframeInfo = ({ env, model, sound, envRotation }) => {
         <a-assets>
           <img id="skyTexture" src={`/environtments/${env}`} alt="sky" />
         </a-assets>
-        <Entity primitive="a-light" type="ambient" color="#000" />
+
         <Entity
           primitive="a-light"
           type="point"
-          intensity="2"
+          intensity="1.5"
           position="2 4 4"
         />
         <Entity
