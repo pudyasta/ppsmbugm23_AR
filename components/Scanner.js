@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
-import "mind-ar/dist/mindar-image-aframe.prod.js";
+// import "mind-ar/dist/mindar-image-aframe.prod.js";
 import { redirectTo } from "../helpers/Route";
 const Scanner = (props) => {
   const sceneRef = useRef(null);
