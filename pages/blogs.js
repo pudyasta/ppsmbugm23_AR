@@ -4,9 +4,11 @@ import EntryAr from "../components/EntryAr";
 const blogs = () => {
   return (
     <>
-      <audio src="/iphone_14.mp3" autoPlay={true} loop></audio>
-
-      <EntryAr />
+      <EntryAr
+        model="/three-assets/isipol.gltf"
+        sound={"/sounds/vo.m4a"}
+        env={"/environtments/fkkmk.hdr"}
+      />
     </>
   );
 };

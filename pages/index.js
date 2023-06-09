@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 
 import QRScanner from "../components/QRScanner";
 import EntryAr from "../components/EntryAr";
+import Script from "next/script";
 
 export default function Home() {
   const [device, setDevice] = useState("mobile");
@@ -20,9 +21,15 @@ export default function Home() {
 
   return (
     <>
-      <audio src="/iphone_14.mp3"></audio>
+    <Script
+        src="https://aframe.io/releases/1.4.1/aframe.min.js"
+        strategy="beforeInteractive"
+      ></Script>
       <div className="container">
-        {device === "mobile" ? <QRScanner /> : <EntryAr />}
+        {device === "mobile" ? <QRScanner /> : <EntryAr
+          model="isipol"
+          sound={"/sounds/vo.m4a"}
+          env={"isipolnew.jpg"}/>}
       </div>
     </>
   );

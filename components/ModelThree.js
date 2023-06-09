@@ -6,15 +6,17 @@ import { useRef } from "react";
 import { useEffect } from "react";
 
 const ModelThree = (props) => {
+  const modelx = props.model;
   const modelRef = useRef();
 
-  const { camera } = useThree();
   const modelMatrix = new THREE.Matrix4();
+  const { camera } = useThree();
 
   useEffect(() => {
     modelMatrix.copy(modelRef.current.matrixWorld);
   }, []);
-  const model = useLoader(GLTFLoader, "/three-assets/tk.gltf");
+  const model = useLoader(GLTFLoader, modelx);
+
   let mixer;
   if (model.animations.length) {
     mixer = new THREE.AnimationMixer(model.scene);
@@ -37,7 +39,7 @@ const ModelThree = (props) => {
   });
 
   return (
-    <group position={props.position} ref={modelRef}>
+    <group position={props.position} rotation={props.rotation} ref={modelRef}>
       <primitive object={model.scene} scale={props.scale} />
     </group>
   );
